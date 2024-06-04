@@ -32,6 +32,7 @@ void initDisplay(){
 void setPlacar(int meta, int alcancado) {
   Display.setTextEffect(1, PA_SCROLL_LEFT, PA_SCROLL_LEFT);
   Display.setTextAlignment(PA_LEFT);
+  Serial.println("Tampas"+String(alcancado));
   Display.print("Tampas"+String(alcancado));
 }
 
@@ -58,8 +59,10 @@ int alcancado = 0;
 void increment(){
   if(hasMoviment()){
     alcancado++;    
-    Serial.println("https://ecoplay-landingpage.vercel.app/api/tampinha");
+    //Serial.println("https://ecoplay-landingpage.vercel.app/api/tampinha");
     verifyGoal();
+    Serial.println(alcancado);
+    delay(250);
   }  
 }
 
@@ -78,5 +81,4 @@ void setup() {
 void loop() {
   setPlacar(meta, alcancado);  
   increment();
-  delay(25);
 }
