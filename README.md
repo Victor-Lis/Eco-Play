@@ -1,5 +1,5 @@
 # Eco-Play 
-Esse é o lado de IOT do projeto Eco-Play
+Esse é o lado de IOT do projeto Eco-Play, esse é o lado do projeto em que contabiliza as tampinhas, exibe no placar e ao mesmo tempo salva no banco de dados!
 
 <br>
 
@@ -111,13 +111,18 @@ void loop() {
 
 <br>
 
+# Relacionados
+- [Veja aqui o lado físico do projeto](https://github.com/Victor-Lis/EcoPlay-LandingPage)
+
+<br>
+
 # Autores
 
-### Orientadores
+## Orientadores
 - [@Márcio-Yugi](https://www.linkedin.com/in/marcio-yuji-tokunaga-3aba8016/)
 - [@Kátia-Maria](https://www.linkedin.com/in/katia-fushita-180522160/)
 
-### Alunos
+## Alunos
 - [@Karlos-Eduardo](https://www.linkedin.com/in/karlos-eduardo-marques-araujo-de-moraes-2b531b293/)
 - [@Miguel-Rosillo](https://www.linkedin.com/in/miguel-rosillo-8534a8294/)
 - [@Pedro-Henrique](https://www.linkedin.com/in/pedro-henrique-moraes-samsonas-4a0b3a29a/)
