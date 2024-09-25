@@ -12,7 +12,6 @@
 //   DIN   |   11
 //   CS    |   10
 //   CLK   |   13
-
 #define MAX_DEVICES 8  
 #define CLK_PIN   13   
 #define DATA_PIN  11   
@@ -40,15 +39,16 @@ void setPlacar(int meta, int alcancado) {
 // -------------------------------------------------------------------------------- Sensor v
 
 // Explicação Sensor
+
 //   Sensor  | Arduino
 //   Marrom  |   5v
 //   Azul    |   GND
 //   Preto   |   Data
-
-const int sensor = 2;
+const int sensor = A0;
 
 boolean hasMoviment(){
-  return (digitalRead(sensor) == LOW);
+  //return (digitalRead(sensor) == LOW);
+  return (analogRead(sensor) < 550);
 }
 
 // -------------------------------------------------------------------------------- Variáveis de "Software" v
@@ -59,18 +59,19 @@ int alcancado = 0;
 void increment(){
   if(hasMoviment()){
     alcancado++;    
-    //Serial.println("https://ecoplay-landingpage.vercel.app/api/tampinha");
+    Serial.println("https://ecoplay-landingpage.vercel.app/api/tampinha");
     verifyGoal();
-    Serial.println(alcancado);
-    delay(250);
+    delay(100);
   }  
 }
 
 void verifyGoal(){
-   if(alcancado >= meta){
-      alcancado = 0; 
-   }
+  if(alcancado >= meta){
+    alcancado = 0; 
+  }
 }
+
+// -------------------------------------------------------------------------------- Main v
 
 void setup() {
   Serial.begin(9600);
