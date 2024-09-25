@@ -112,7 +112,7 @@ void loop() {
 <br>
 
 # Relacionados
-- [Veja aqui o lado físico do projeto](https://github.com/Victor-Lis/EcoPlay-LandingPage)
+- [Veja aqui o lado web do projeto](https://github.com/Victor-Lis/EcoPlay-LandingPage)
 
 <br>
 
