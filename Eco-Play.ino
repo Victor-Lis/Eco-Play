@@ -31,7 +31,7 @@ void initDisplay(){
 void setPlacar(int meta, int alcancado) {
   Display.setTextEffect(1, PA_SCROLL_LEFT, PA_SCROLL_LEFT);
   Display.setTextAlignment(PA_LEFT);
-  Serial.println("Tampas"+String(alcancado));
+  //Serial.println("Tampas"+String(alcancado));
   Display.print("Tampas"+String(alcancado));
 }
 
@@ -44,11 +44,14 @@ void setPlacar(int meta, int alcancado) {
 //   Marrom  |   5v
 //   Azul    |   GND
 //   Preto   |   Data
+
 const int sensor = A0;
+//const int sensor = 2;
 
 boolean hasMoviment(){
   //return (digitalRead(sensor) == LOW);
   return (analogRead(sensor) < 550);
+  Serial.println(analogRead(sensor));
 }
 
 // -------------------------------------------------------------------------------- Variáveis de "Software" v
@@ -59,7 +62,8 @@ int alcancado = 0;
 void increment(){
   if(hasMoviment()){
     alcancado++;    
-    Serial.println("https://ecoplay-landingpage.vercel.app/api/tampinha");
+    
+    //Serial.println("https://ecoplay-landingpage.vercel.app/api/tampinha");
     verifyGoal();
     delay(100);
   }  
@@ -80,6 +84,6 @@ void setup() {
 }
 
 void loop() {
-  setPlacar(meta, alcancado);  
+  setPlacar(meta, alcancado);
   increment();
 }
